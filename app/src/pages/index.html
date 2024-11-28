@@ -1,17 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Ailton Neto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Ailton</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- Seção de Abertura (Hero Section) -->
+    <header class="bg-zinc-900 sticky w-full z-50 text-white transition lg:fixed">
+        <nav class="container mx-auto flex justify-center md:justify-between items-center sm:px-16 py-4">
+            <h1 class="text-2xl font-semibold">Ailton</h1>
+            <ul class="space-x-12 font-normal hidden md:flex">
+                <li
+                    class="hover:text-orange-400 transition-color ease-in-out duration-300 hover:underline active:scale-105 active:text-orange-500">
+                    <a href="">Biografia</a>
+                </li>
+                <li
+                    class="hover:text-orange-400 transition-color ease-in-out duration-300 hover:underline active:scale-105 active:text-orange-500">
+                    <a href="">Músicas</a>
+                </li>
+                <li
+                    class="hover:text-orange-400 transition-color ease-in-out duration-300 hover:underline active:scale-105 active:text-orange-500">
+                    <a href="">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Seção Principal-->
+    <section class="relative h-screen overflow-hidden">
+        <!-- Imagem de Fundo -->
+        <div class="absolute inset-0 h-screen w-full bg-cover bg-bottom bg-no-repeat"
+            style="background-image: url('../../public/assets/images/perfilAilton1.png');">
+        </div>
+
+        <!-- Conteúdo Frontal -->
+        <div class="relative flex flex-col justify-center items-center h-screen bg-black bg-opacity-60 text-white">
+            <h1 class="text-5xl font-bold">Ailton</h1>
+            <p class="text-2xl mt-4">A arte de glorificar ao Senhor</p>
+            <div class="mt-6 flex gap-6">
+                <button
+                    onclick="window.open('https://open.spotify.com/intl-pt/artist/7n6TjQJSasmQm3LB5XCfsL?si=mh4JCA_oQfus9pxjQrqK2Q', '_blank')"
+                    class="px-8 py-4 bg-transparent text-white font-semibold border-2 border-white 
+                           hover:bg-green-400 hover:text-black hover:border-green-400 transition-color duration-300 active:bg-green-500 active:border-green-500 active:scale-105 ease-in-out">
+                    Ouça Agora no Spotify
+                </button>
+                <button onclick="window.open('https://www.youtube.com/@Ailton-Oficial', '_blank')"
+                    class="px-8 py-4 bg-transparent text-white font-semibold border-2 border-white 
+                           hover:bg-red-400 hover:text-black hover:border-red-400 transition-color duration-300 active:bg-red-500 active:border-red-500 active:scale-105 ease-in-out">
+                    Inscreva-se no YouTube
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Versículo Aleatório -->
+    <section class="bg-zinc-900 py-10">
+        <div class="container mx-auto px-6 text-center" data-aos="zoom-in"
+            data-aos-delay="100" data-aos-offset="0">
+            <div class="bg-zinc-800 bg-opacity-70 rounded-lg p-8 shadow-lg">
+                <p id="texto-versiculo" class="text-white text-3xl font-semibold italic">
+                    <!-- Versículo será carregado aqui -->
+                </p>
+                <p id="referencia-versiculo" class="text-orange-400 text-xl font-light mt-4">
+                    <!-- Referência será carregada aqui -->
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção Biografia -->
+    <section>
+        <h2>Quem é Ailton Neto?</h2>
+        <div>
+            <p>Ailton Neto é um músico multi-instrumentista dedicado a levar mensagens de fé através da música. Após sua
+                recente conversão, ele passou a usar sua arte para glorificar a Deus e inspirar vidas.</p>
+            <img src="imagem-ailton.jpg" alt="Foto de Ailton Neto">
+        </div>
+    </section>
+
+    <!-- Seção de Músicas e Discografia -->
+    <section>
+        <h2>Minha Música, Minha Fé</h2>
+        <p>Confira minhas músicas nas plataformas digitais:</p>
+        <div>
+            <a href="https://open.spotify.com" target="_blank">Ouça no Spotify</a>
+            <a href="https://music.apple.com" target="_blank">Ouça na Apple Music</a>
+        </div>
+    </section>
+
+    <!-- Seção Lives e Conteúdo no YouTube -->
+    <section>
+        <h2>Acompanhe Minhas Lives</h2>
+        <p>Momentos de adoração, música e mensagens de fé. Inscreva-se no meu canal!</p>
+        <div>
+            <iframe src="https://www.youtube.com/embed/videoID" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Seção Contato e Redes Sociais -->
+    <section>
+        <h2>Fale Comigo</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Ailton Neto. Todos os direitos reservados.</p>
+        <p>Desenvolvido com ❤️ para conectar almas a Deus.</p>
+    </footer>
+    <script>
+        const versiculos = [
+            { texto: '"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."', referencia: "João 3:16" },
+            { texto: '"Louvai ao SENHOR, porque ele é bom, porque a sua benignidade dura para sempre."', referencia: "Salmos 107:1" },
+            { texto: '"Quem retribui o bem com o mal, jamais deixará de ter mal no seu lar."', referencia: "Provérbios 17:13" },
+            { texto: '"Mil cairão ao teu lado, e dez mil à tua direita, mas não chegará a ti."', referencia: "Salmos 91:7" },
+            { texto: '"O choro pode durar uma noite, mas a alegria vem pela manhã."', referencia: "Salmos 30:5" },
+            { texto: '"Não andem ansiosos por coisa alguma, mas em tudo, pela oração e súplicas, e com ação de graças, apresentem seus pedidos a Deus."', referencia: "Filipenses 4:6" },
+            { texto: '"Bem-aventurados os retos em seus caminhos, que andam na lei do Senhor."', referencia: "Salmos 119:1" },
+            { texto: '"E Deus enxugará de seus olhos toda lágrima."', referencia: "Apocalipse 7:17" },
+            { texto: '"Busquem, pois, em primeiro lugar o Reino de Deus e a sua justiça, e todas essas coisas lhes serão acrescentadas."', referencia: "Mateus 6:33" },
+            { texto: '"Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós."', referencia: "1 Pedro 5:7" },
+            { texto: '"Respondeu Jesus: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim."', referencia: "João 14:6" },
+            { texto: '"O Senhor é o meu pastor, nada me faltará."', referencia: "Salmos 23:1" },
+            { texto: '"Tudo posso naquele que me fortalece."', referencia: "Filipenses 4:13" },
+            { texto: '"Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará."', referencia: "Salmos 37:5" },
+            { texto: '"Lâmpada para os meus pés é a tua palavra e luz para o meu caminho."', referencia: "Salmos 119:105" }
+        ];
+        window.onload = function () {
+            const versiculoAleatorio = versiculos[Math.floor(Math.random() * versiculos.length)];
+            document.getElementById("texto-versiculo").textContent = versiculoAleatorio.texto;
+            document.getElementById("referencia-versiculo").textContent = versiculoAleatorio.referencia;
+        };
+
+    </script>
     <script>
         AOS.init();
     </script>
 </body>
+
 </html>
